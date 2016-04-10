@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>事件流</title>
+ </head>
+ <body>
+  <div id="box">
+     <input type="button" value="按钮1" id="btn" onclick="showMes()">
+	 <input type="button" value="按钮2" id="btn2" >
+	 <input type="button" value="按钮3" id="btn3">
+  </div>
+
+  <script>
+     function showMes(){
+	  alert('hello world!');
+	 }
+	 var btn2= document.getElementById('btn2');
+	 btn2.onclick=function(){
+	  alert('这是通过DOM 0级添加的事件！');
+	 }
+	 //btn2.onclick=null;
+	 //DOM2级事件.接受的三个参数（要处理的事件名，作为事件处理程序的函数，布尔值）
+	 /*btn3.addEventListener('click',showMes,false);
+	 btn3.addEventListener('click',function(){
+	   alert(this.value);
+	 },false);
+	 //删除事件
+    // btn3.removeEventListener('click',showMes,false);*/
+	//跨浏览器事件处理程序
+	 var eventUtil={
+		 //添加句柄
+	    addHandler:function(element,type,handler){
+		  if(element.addEventListener){
+		     element.addEventListenter(type,handler,false);
+		  }else if(element.attachEvement){
+		    element.attachEvement('on'+type,handler);
+		  }else{
+		    element['on'+type]=handler;
+		  }
+		}
+		//删除句柄
+		removeHandler:function(element,type,handler){
+		  if(element.removeEventListener){
+		     element.removeEventListenter(type,handler,false);
+		  }else if(element.dettachEvement){
+		    element.dettachEvement('on'+type,handler );
+		  }else{
+		    element['on'+type]=null;
+		  }
+		}
+	 }
+	 eventUtil.addHandler(btn3,'click',showMes());
+  </script>
+ </body>
+</html>
