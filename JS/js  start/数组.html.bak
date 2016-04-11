@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>数组</title>
+
+   <script >
+   //创建空数组
+  /* var arr = [];
+   var stu =new Array();
+   alert(arr.length);
+   alert(stu.length);
+
+   //创建有初始值的非空数组
+   var arr = ['a','b','c','d'];
+   var stu = new Array('a','b','c','d');
+
+   alert(arr[3]);
+   alert(stu[3]);*/
+
+   //引用数组的单元值。
+   /*var arr = ['a','b','c','d'];
+   alert(arr[3]);
+   arr[3] = 'F';
+   alert(arr[3]);*/
+
+   //数组的遍历。
+   //把arr的每个单元打印在页面上
+   /*var arr = ['a','b','c','d','e'];
+
+   for(var i=0;i<arr.length;i++){
+      document.write(arr[i] + "<br/>");
+   }*/
+
+   //数组长度的变化
+    var arr = ['a','b','c','d','e','f','g','h','i'];
+    //alert(arr.length);
+    //arr.length = 4;
+	for(var i=0,len=arr.length;i<len;i++){
+	  document.write(arr[i] + "<br/>");
+	}
+
+
+
+   </script>
+
+ </head>
+ <body>
+  
+ </body>
+</html>

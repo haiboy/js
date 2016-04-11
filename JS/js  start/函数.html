@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>函数</title>
+  <script type="text/javascript">
+   
+    /*document.write("水入壶中<br/>");
+	document.write("壶在炉上");
+	document.write("茶叶入杯");
+	document.write("开水冲泡");
+
+	function tea(){
+	 document.write("水入壶中<br/>");
+	 document.write("壶在炉上<br/>");
+	 document.write("茶叶入杯<br/>");
+	 document.write("开水冲泡<br/>");
+	
+	}
+    tea();*/  //体现函数封装性；
+
+	//依然想泡茶
+	//之前些的函数有个局限，只能泡一种茶
+	//改造：改成客户要什么茶，就加什么茶
+	/*function tea(cha){
+	 document.write("水入壶中<br/>");
+	 document.write("壶在炉上<br/>");
+	 document.write(cha + "入杯<br/>");
+	 document.write("开水冲泡<br/>");
+	}
+
+   var like ="铁观音";
+
+   tea(like);
+
+   function msg(){
+     alert("welcome to itcase");
+   }
+   
+   msg();*/
+
+   //调用函数的方法：函数名（【arg1】【arg2】.。。。。）
+
+  //函数的返回值
+   /*function t(){
+     return 5;
+   }
+ 
+    var b= t() + 3;
+    alert(b);
+
+	var i =0;
+	i += 3;
+	document.write("hello");
+
+    fun();
+
+	document.write("world");
+	document.write(i);
+
+	function fun(){
+	   i +=5;
+       if(i >10){
+	   return;
+	   }
+	   document.write( "<br/>~~~~<br/>");
+	
+	}*/
+
+	//函数中的作用域；
+	var a =3;
+	var b =4;
+    var c =7;
+	function t(){
+	   var a =5;
+	   var c =6;
+	   alert(a + "###" + b);
+
+	   function m(){
+		  var d =8;//d =8;
+	      alert(c);
+		  alert(d);
+	   }
+	   m();
+	}
+     
+	t();
+
+	alert(a);
+	alert(d);
+
+/*
+在js中声明变量，必须用var
+
+不用var 带来一个后果：全局变量被污染；
+
+*/
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

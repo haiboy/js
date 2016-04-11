@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <script type="text/javascript">
+       function  t1(){
+	      if(document.getElementsByName('email')[0].value == ""){
+		     alert("请填写email");
+		  }
+	   }
+
+	   function  t2(){
+	     document.getElementsByName('email')[0].value = '请填写email';
+	   }
+	   
+	   function t3(){
+	     alert("再唠一会");
+	   }
+
+	   function t4(){
+	      var baidu = document.getElementById('baidu');
+		  baidu.style.display = "block";
+	   }
+       
+	   function t5(){
+	      var baidu = document.getElementById('baidu');
+		  baidu.style.display ="none";
+	   }
+       function t6(){
+	      var sel = document.getElementsByTagName('select')[0];
+		  //alert("你的学历是" + sel.value);
+		  if(sel.value == '' || sel.value == '小学'){
+		    alert('进城打工，至少初中');
+		  }
+	   }
+
+       function t7(){
+		   var e =document.getElementsByName('email')[0].value;
+	      if(e == ""|| e=="请填写email"){
+		     alert("请填写email");
+	   }
+  </script>
+
+  <style type="text/css">
+   #baidu {
+     display:none;
+   }
+  
+  </style>
+ </head>
+
+ <body  onload="t2()" onunload="t3();">
+
+    <div>
+	  <a herf="#" onmouseover="t4();"onmouseout="t5();">百度</a>
+	  <p id="baidu">百度是一家大公司，有钱，HR很漂亮
+	    <img src="image\baidu.png"/>
+	  </p>
+	</div>
+
+    <form onsubmit="t7();">
+	    <p>
+		  email:<input type="text" name="email" onblur="t1();"/>
+		</p>
+	
+	    <p>
+		  国家:<input type="text" name="country"/>
+		</p>
+	
+	    <p>
+		   <select name="xueli" onchange="t6()">
+		      <option  value="">请选择学历</option>
+		      <option  value="大学">大学</option>
+			  <option  value="高中">高中</option>
+			  <option  value="小学">小学</option>
+		   
+		   </select>
+		</p>
+		<p>
+		  <input type="submit" value="提交"/>
+		</p>
+	</form>
+ </body>
+</html>

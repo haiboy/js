@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>对象</title>
+  <script type="text/javascript">
+    //创建对象：  
+	//创建语法：{属性1：值1，属性2：值2}
+	var stu ={name:'xiaohua',age:22,number:007,score:99}
+    
+	//alert(stu['name']);
+	/*alert(stu.name);//引用对象里的属性；
+
+	//对象的遍历：For(per  in obj){}
+	for(per in stu){
+	  document.write(per + "<br/>")
+	}
+	*/
+
+    for(per in stu){
+	  document.write(stu[per] + "<br/>")
+	}//用for in 结构时，利用属性访问值，只能用obj【属性值】的方法，不能用obj.属性
+
+    document.write('<br/>')
+	delete stu.number;
+
+	 for(per in stu){
+	  document.write(stu[per] + "<br/>")
+	}
+
+	//对象的方法,对象的某个属性值可以是函数，即是方法
+	/*
+	var stu = {name:'zhangsan',age:22, talk:function(){alert("i am zhangsan")}};
+
+	stu.talk();
+	*/
+
+    var stu = {name:'zhangsan',age:22, talk:null}
+    var stu = {name:'lisi',age:22, talk:null}
+	function t(){
+	  alert('i am ' + this.name);
+	}
+
+    zhang.talk = t;
+	lisi.talk = t;
+
+    zhang.talk();
+	lisi.talk();
+
+
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

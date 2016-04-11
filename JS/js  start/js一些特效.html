@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>一些特效</title>
+
+  <script type="text/javascript">
+     //tab切换特效
+	 function tab(pid){
+	  var ps=['mil','news','people','tech'];
+
+	  //传过来的参数等于哪个id就将其变为block 否则变成none。
+
+	  for(var i=0;i<ps.length;i++){
+	    if(ps[i]== pid){
+		  document.getElementById(ps[i]).style.display="block";
+		}else{
+		  document.getElementById(ps[i]).style.display="none";
+		}
+	  }
+	 }
+	 
+
+  </script>
+
+  <style type="text/css">
+  ul{
+    width:200px;
+	height:30px;
+  
+  }
+  li {
+     float:left;
+	 list-style:none;
+	 margin:5px;
+  }
+  p {
+    width:200px;
+	height:200px;
+	border:solid  1px blue;
+  }
+  #news,#people,#tech{
+     display:none;
+  }
+  
+  
+  </style>
+ </head>
+ <body>
+     <div>
+	   <ul>
+	     <li onmouseover="tab('mil')">军事</li>
+		 <li onmouseover="tab('news')">新闻</li>
+		 <li onmouseover="tab('people')">人物</li>
+		 <li onmouseover="tab('tech')">科技</li>
+	   </ul>
+	   <p id="mil">
+	      军事频道
+	   </p>
+	   <p id="news">
+	      新闻频道
+	   </p>
+	   <p id="people">
+	      人物频道
+	   </p>
+	   <p id="tech">
+	      科技频道
+	   </p>
+	 </div>
+	 
+ </body>
+</html>

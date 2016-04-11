@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ <style type="text/css" >
+  body  {
+   background:red;
+  }
+  div{
+  background:bule;
+  }
+ </style>
+ </head>
+ <body>
+   <div id="one">w shi haoren</div>
+   <div>w shi huairen</div>
+   <div></div>
+   <div></div>
+ </body>
+</html>

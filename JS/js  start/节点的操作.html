@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>节点操作</title>
+   
+
+   <style type="text/css">
+   
+   p {
+      width:10px;
+	  height:100px;
+	  background:blue;
+   }
+
+   #container p{
+        width:10px;
+		height:100px;
+		background:green;
+   
+   }
+   
+   
+   </style>
+   <script type="text/javascript">
+       function t1(){
+	      //想在container里增加一个节点，分两步
+		  //1、创建p节点
+		  //2、把p节点附加到container里
+	   var nodep=document.createElement('p');
+
+	   var art = document.createTextNode(Math.random());
+	   nodep.appendChild(art);
+	   var cont=document.getElementById('container');
+	   cont.appendChild(nodep);
+	   
+	   }
+       
+	   //将中插入到西上面
+	   function t2(){
+	      
+	       var zhong = document.createTextNode("中");
+		   var lin =document.createElement('li');
+		   lin.appendChild(zhong);
+
+           var uln= document.getElementsByTagName('ul')[0];
+		   var xi = uln.children[2];
+
+		   uln.insertBefore(lin,xi);
+	   
+	   }
+
+	   //复制ul里的内容到id为cart的div中
+	   function t3(){
+       var oldul =document.getElementsByTagName('ul')[0];
+       var newul = oldul.cloneNode(true);
+
+	   var cart = document.getElementById('cart');
+	   cart.appendChild(newul);
+   }
+
+   //删除“中”这个节点
+   //思路：找到中节点，再找到中的父节点，
+   //在中的父节点中，调用removeChild()方法；
+   function t4(){
+   
+     var uln = document.getElementsByTagName('ul')[0];
+	 var zhong = uln.children[2];
+	 uln.removeChild(zhong);
+   
+   }
+
+   //节点的替换
+   //思路：找到“北，
+   //创建一个“<li>上</li>”
+   //再找到北的父元素，在父元素中调用replaceChild(新，旧)方法
+   
+   function t5(){
+   
+      var newli = document.createElement('li');
+	  var shang = document.createTextNode('上');
+      newli.appendChild(shang);
+      
+	  var uln =document.getElementsByTagName('ul')[0];
+
+      var bei = uln.children[4];
+      
+	  uln.replaceChild(newli,bei);
+   
+   }
+
+
+   </script>
+ </head>
+ <body>
+    <ul>
+	   <li>东</li>
+	   <li>南</li>
+	   <li>中</li>
+	   <li>西</li>
+	   <li>北</li>
+	</ul>
+    <p></p>
+	<div  id="container">
+	     <p></p>
+    </div>
+	<div  id="cart">
+	
+	
+	
+	</div>
+
+	<input type="button" value="增加p节点" onclick="t1()"/>
+	<input type="button" value="把中插在西前面"  onclick="t2()"/>
+    <input type="button" value="复制一份ul内容" onclick="t3()"/>
+	<input type="button" value="删除一个子节点"  onclick="t4()"/>
+	<input type="button" value="把北替换成上"  onclick="t5()"/>
+ </body>
+</html>

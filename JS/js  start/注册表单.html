@@ -1,0 +1,90 @@
+<!DOCTYPE htmlPUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xlmns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>注册表单</title>
+  <script type="text/javascript">
+
+   /*function chk(){
+	   //判断用户名是否为空；
+     var inpu ="document.ElementsByName('username')[0];
+	if( inpuser.value == ''||inpuser.value=='请输入用户名'）{
+	  alert('请输入用户名');
+	  return false;
+	}*/
+	//判断密码不为空，且一致
+
+   
+   }
+   function checkuser (){
+     var u - document.getElementsByName('username')[0].value；
+	 if(u -- 'zhangsan'){
+	    alert('张三已经被注册');
+		}else{
+			alert('用户名可用！');
+		}
+   }
+  </script>
+ </head>
+ <body>
+   <h2>注册表单</h2>
+   <form methon="POST"  onsubmit=" return chk">
+       <P>
+	    用户名：<input type="text" name="username"/>&nbsp;
+		<input type="button" value="检测用户名" onclick="cheskuser();"/>
+	   </P>
+	   <p>
+	    密码框：<input type="password" name="passwd"/>
+	   </p>
+	   <p>
+	    确认密码：<input type="password" name="passwd"/>
+	   </p>
+
+       <p>
+	   性别：男：<input type="radio" name="gender" value="男"/>
+	   女：<input type="radio" name="gender" value="女"/>
+	   </p>
+
+       <p>
+	   爱好：</br>
+	   篮球：<input type="checkbox" name="hobby" value="篮球"/>
+	   足球：<input type="checkbox" name="hobby" value="足球"/>
+	   台球：<input type="checkbox" name="hobby" value="台球"/>
+	   </P>
+
+	   <p>
+	   上传头像：
+	   <input type="file"  name="touxiang"/>
+	   </p>
+
+	   <p>
+	    学历；
+	      <select name="xueli">
+		    <option value="0">请选择学历</option>
+		    <option value="小学">小学</option>
+			<option value="中学">中学</option>
+			<option value="大学">大学</option>
+			<option value="博士">博士</option>
+		  </select>
+	   </p>
+
+	   <p>
+	    个人介绍：
+		<textarea name="introduce"></textarea>
+	   </p>
+
+       <p>
+	   <input type="hidden" name="guoji" value="中国"/>
+	   <input type="submit" value="确认注册"/>&nbsp &nbsp;
+	   <input type="image" src="#"/>&nbsp &nbsp;
+	   <input type="reset" value="重新填写"/>
+	   </p>
+
+   </form>
+ </body>
+</html>

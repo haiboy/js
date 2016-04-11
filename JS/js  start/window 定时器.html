@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>定时器</title>
+  <script type="text/javascript">
+      //定一段时间后，执行某一个函数
+      function t(){
+	    alert('5秒到，快走！');
+		window.location.href="http://www.baidu.com";
+	  }
+
+    window.setTimeout("t();",5000);
+
+
+	//用setTimeout可以来实现每隔几秒执行一次函数
+	//window.setIntval('事件'，‘时间’);
+
+  </script>
+
+  <style type="text/css">
+  
+  </style>
+ </head>
+ <body>
+    <input  type="button" value="请输入你的姓名" onclick="reg();"/>
+ </body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>js系统函数</title>
+ <script type="text/javascript">
+  // 一、escape,把字符转换成各平台通用的unicode编码
+ /* var str ="人民币";
+  var enc =escape(str);
+  alert(enc);
+  alert(unescape(enc));*/
+
+  //parseInt,parseFloat
+ /* var age ="12";
+  age = parseInt(age);
+  age =age+1;
+  alert(age);*/
+
+  //一、parseInt:把字符串的（前缀）部分数字分析成整型数字,如果首字母不是数字，分析出非数字“NaN”.
+  //如果碰到前缀是小数点的情况，直接舍弃小数点后面的部分并保存整数。
+ /*var age ="helloword234"
+ age = parseInt(age);
+ alert(age);*/
+
+ //二、parseFloat:把字符串的前缀部分的数字分析成浮点型
+
+ /*var age ="12.98765fhe";
+ age =parseFloat(age);
+ alert(age);*/
+
+//isNaN（用来判断某个变量是非数字）
+//isFinite(专门用来判断是否有限)
+
+/*var age ="abc999";
+age =parseInt(age);
+if(isNaN(age)){
+  alert("是非数字")
+}else{
+  alert("你的年龄是" +age);
+}*/
+
+/*var age =1/0;
+if(isFinite(age)){
+   alert("你的年龄是" + age);
+}else{
+   alert("你不可能这么大");
+}
+
+var age = -1/0;
+if(isFinite(age)){
+   alert("你都年龄是" + age);
+}else{
+   alert("你不可能这么大");
+}*/
+
+//Eval 执行一段js代码
+
+var t = 3;
+eval("t += 3");
+alert(t);
+
+
+
+ 
+ </script>
+
+
+ </head>
+ <body>
+  
+ </body>
+</html>

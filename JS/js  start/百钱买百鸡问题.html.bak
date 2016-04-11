@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>百钱买百鸡问题</title>
+  <script type="text/javascript">
+  /*
+   百钱买百鸡问题
+  */
+
+/*for(var g =1;g<=100;g++){
+   for(var m =1;m<=100;m++){
+     for(var c=1;c<=100;c++){
+	   if((g+m+c) == 100&&(5*g+3*m+c/3)==100){
+
+		   document.write(g + "只公鸡" + m +"只母鸡" + c +"只小鸡"+"<br/>");
+	   
+	   }
+	 
+	 }
+   }
+  }*/
+
+   for(var g =1;g<=18;g++){
+     for(var m =1;m<=32;m++){
+	   var c =100-g-m;
+	   if((g+m+c)== 100 &&(5*g+3*m+c/3)==100){
+	    document.write(g + "只公鸡" + m +"只母鸡" + c +"只小鸡"+"<br/>")
+	   }
+	 }
+   }
+
+
+
+  
+  
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

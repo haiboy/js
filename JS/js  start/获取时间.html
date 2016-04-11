@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>时间</title>
+
+  <script type="text/javascript">
+  //日期时间必须通过new实现得到
+ function clock(){
+  var today = new Date();
+  var year = today.getFullYear();
+  var month = today.getMonth();
+  var day =today.getDate();
+  var hour = today.getHours();
+  var mini =today.getMinutes();
+  var sec = today.getSeconds();
+
+  document.getElementById("clock").value =(year + " " + month + " " + day + " " + hour +":" + mini + ":" +sec);
+ }
+
+  </script>
+
+ </head>
+ <body>
+    <input type="text" id="clock"/>
+	<script type="text/javascript">
+	  setInterval('clock()',1000);//调用时间的函数
+	</script>
+ </body>
+</html>

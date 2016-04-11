@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Dom节点查找</title>
+<script type="text/javascript">
+  
+  function t1(){
+    alert(document.getElementById('artcicle'));
+  
+  }
+   
+  function t2(){
+    alert( document.getElementsByTagName('div').length);
+  }
+  
+  function t3(){
+   // alert(document.getElementsByName('hobby'));
+   for(var i =0,inp=document.getElementsByName('hobby'),len=inp.length;i<len;i++){
+    alert(inp[i]);
+   }
+  }
+  
+
+</script>
+
+
+
+
+ </head>
+ <body>
+    <p>
+	   <span>我是span</span>
+	   中国
+	</p>
+    <img src=""/>
+	<div id="artcicle" name="hobby">文章内容</div>
+	<p>
+	<input type="text" name="hobby">
+	<input type="text" name="hobby">
+	<input type="text" name="hobby">
+	</p>
+
+	<p>
+	  <input type="button" value="ById" onclick="t1();"/>
+	</p>
+	<p>
+	  <input type="button" value="ByTagName" onclick="t2();"/>
+	</p>
+	<p>
+	  <input type="button" value="ByName" onclick="t3()"/>
+	</p>
+
+
+
+
+ </body>
+</html>

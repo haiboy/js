@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>随机数练习题</title>
+ </head>
+<script type="text/javascript">
+  /*
+  根据Math.random方法,random默认返回(0,1)之间的随机
+根据random方法,写一个方法,返回(5,10)之间的随机数.
+
+选做
+再改进函数,接受两个参数, xiao, da
+返回(xiao,da)之间的随机数
+*/
+ /*function rand(){
+   //return Math.random();
+   return 5 * Math.random() +5;
+ 
+ }
+
+ for(var i =0;i<10;i++){
+     document.write(rand() + "<br/>");
+ }
+ */
+
+ /*function rand(small,big){
+   return (big - small)*Math.random() + small;
+ }
+
+ for(var i =0;i<10;i++){
+     document.write(rand(9,17) + "<br/>");
+ }
+ */
+
+ //返回随机整数 Math.ceil();
+function rand(small,big){
+   return Math.ceil((big - small)*Math.random() + small);
+ }
+ for(var i =0;i<10;i++){
+     document.write(rand(9,17) + "<br/>");
+ }
+
+
+  
+  </script>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>innerHTML</title>
+
+  <script type="text/javascript">
+    function t1(){
+	  var cont= document.getElementById('container');
+	 // alert(cont.innerHTML);
+	  var htmlcode="<p><ul> <li><span>东</span></li><li>南</li><li>中</li><li>西</li><li>北</li></ul></p>"
+
+	  cont.innerHTML = htmlcode;
+	 
+	}
+    
+
+    /* function t2(){
+	  var cont=document.getElementById('contianer');
+
+	  var htmlcode="<p><ul> <li><span>东</span></li><li>南</li><li>中</li><li>西</li><li>北</li></ul></p>"
+
+	  cont.innerHTML = htmlcode;
+	 
+	 }*/
+
+  </script>
+ </head>
+ <body>
+     <div id="container">
+	    <p>
+		   <ul>
+		     <li>好</li>
+		   </ul>
+		</p>
+	 </div>
+	 <input type="button" value="内部的html代码" onclick="t1()"/>
+	 <input type="button" value="修改内部的html代码" onclick="t2()"/>
+ </body>
+</html>
